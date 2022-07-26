@@ -1,0 +1,196 @@
+/*================================================
+        |   |   comment  part start |   |   |   |
+ ================================================*/
+#comment {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/commentbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pgap(135px, 135px, 0px, 0px);
+    position: relative;
+
+    .comment-top-shape {
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .comment-bottom-shape {
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+    }
+
+    .comment-left-wrapper {
+        position: relative;
+
+        .comment-chain {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .comment-top-arrow {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 1px solid $socialbg;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+            color: $normalcolor;
+            transition: all linear .3s;
+
+            &:hover {
+                background-color: $hoverbg;
+                border: none;
+                color: #000;
+            }
+        }
+
+        .comment-bottom-arrow {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 1px solid $socialbg;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+            color: $normalcolor;
+            transition: all linear .3s;
+
+            &:hover {
+                background-color: $hoverbg;
+                border: none;
+                color: #000;
+            }
+        }
+
+        .comment-left-slide {
+            .comment-left-item {
+                &.slick-center {
+                    .comment-left-img {
+                        transform: scale(1.4);
+                        background-color: $hoverbg;
+
+                        &::after {
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                @include pgap(42px, 45px, 0, 0);
+
+                .comment-left-img {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    background-color: $commentbg;
+                    overflow: hidden;
+                    object-fit: cover;
+                    transition: all linear .3s;
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-right-wrapper {
+        .comment-right-slide {
+            .comment-right-item {
+                position: relative;
+                background-color: $serviceparabg;
+                @include pgap(60px, 60px, 35px, 35px);
+                margin-left: 70px;
+
+                .comment-right-icon2 {
+                    position: absolute;
+                    top: 44%;
+                    left: 44%;
+                    transform: translate(-44%, -44%);
+                    color: $hovercolor;
+                    font-size: 120px;
+                    opacity: 0.2;
+                }
+
+                .comment-right-icon3 {
+                    position: absolute;
+                    top: 64%;
+                    left: 60%;
+                    transform: translate(-60%, -64%);
+                    color: $hovercolor;
+                    font-size: 120px;
+                    opacity: 0.2;
+                }
+
+                h2 {
+                    @include font('Raleway', 20px, 500, $btncolor);
+                    text-transform: capitalize;
+                }
+
+                .comment-right-icon {
+                    color: $hoverbg;
+                    padding-bottom: 10px;
+                }
+
+                h4 {
+                    @include font('Raleway', 16px, 400, $aboutpara);
+                    padding-bottom: 25px;
+                }
+
+                p {
+                    @include font('Open Sans', 14px, 400, $aboutpara);
+                    line-height: 24px;
+                }
+
+                h3 {
+                    @include font('autograph', 20px, 400, $aboutpara);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                    left: -25px;
+                    height: 50px;
+                    width: 50px;
+                    background-color: $serviceparabg;
+                    border-radius: 0 30px;
+                }
+            }
+        }
+    }
+}
+/*================================================
+        |   |   comment part end |   |   |   |   |
+ ================================================*/

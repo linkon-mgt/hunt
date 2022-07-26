@@ -1,0 +1,173 @@
+/*================================================
+        |   |   service part start |   |   |   |   |
+ ================================================*/
+#service {
+    padding-bottom: 70px;
+
+    .heading {
+        h4 {
+            @include font('Raleway', 35px, 400, $abouthead);
+            text-transform: capitalize;
+            @include pgap(0, 30px, 0, 0)
+        }
+
+        p {
+            @include font('Open Sans', 14px, 400, $aboutpara);
+            @include pgap(0, 60px, 25px, 25px);
+            line-height: 24px;
+        }
+    }
+
+    .service-main-item {
+        position: relative;
+
+        .service-chain {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .service-top-arrow {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 1px solid $mainbg;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+            transition: all linear .3s;
+
+            &:hover {
+                background-color: $hoverbg;
+                border: none;
+            }
+        }
+
+        .service-bottom-arrow {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 1px solid $mainbg;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+            transition: all linear .3s;
+
+            &:hover {
+                background-color: $hoverbg;
+                border: none;
+            }
+        }
+
+        .service-slide {
+            .service-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include mgap(15px, 15px, 0, 0);
+
+                &.slick-center {
+                    .service-middle {
+                        .inner-middle {
+                            transform: scale(1.5);
+                            background-color: $hoverbg;
+                        }
+                    }
+
+                    .service-right {
+                        filter: drop-shadow(-10px 8px 5px #cacaca);
+                    }
+                    &:nth-child(even){
+                        .service-right{
+                            filter: drop-shadow(10px 8px 5px #cacaca);
+                        }
+                    }
+                }
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+
+                    .service-left {
+                        text-align: left;
+                    }
+
+                    .service-right {
+                        text-align: right;
+
+                        &::after {
+                            left: 96%;
+                        }
+                    }
+                }
+
+                .service-left {
+                    width: 40%;
+                    text-align: right;
+
+                    h4 {
+                        @include font('Raleway', 18px, 500, $abouthead);
+                        text-transform: uppercase;
+                    }
+                }
+
+                .service-middle {
+                    width: 10%;
+
+                    .inner-middle {
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+                        background-color: $aboutbg;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all linear .3s;
+
+                        img {
+                            height: 50%;
+                            width: 50%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .service-right {
+                    position: relative;
+                    width: 40%;
+                    @include pgap(50px, 42px, 30px, 30px);
+                    background-color: $serviceparabg;
+                    transition: all linear .3s;
+
+                    p {
+                        @include font('Open Sans', 14px, 400, $aboutpara);
+                        line-height: 24px;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        height: 40px;
+                        width: 40px;
+                        background-color: $serviceparabg;
+                        left: -20px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+/*================================================
+        |   |   service part end |   |   |   |   |
+ ================================================*/
