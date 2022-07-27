@@ -87,7 +87,7 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           vertical:false,
-          // centerMode:false,
+          centerMode:false,
           arrows:false
         }
       }
@@ -116,10 +116,9 @@ $(function () {
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
             vertical:false,
-            centerMode:false,
             arrows:false,
           }
         },
@@ -130,7 +129,6 @@ $(function () {
             slidesToShow: 1,
             slidesToScroll: 1,
             vertical:false,
-            centerMode:false,
             arrows:false,
           }
         }

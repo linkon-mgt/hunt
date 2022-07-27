@@ -163,6 +163,16 @@
                         top: 50%;
                         transform: translateY(-50%) rotate(45deg);
                     }
+                    .service-right-new-shape{
+                        position: absolute;
+                        height: 40px;
+                        width: 40px;
+                        background-color: $serviceparabg;
+                        left:50%;
+                        top: -20px;
+                        transform: translatex(-50%) rotate(45deg);
+                        
+                    }
                 }
             }
         }
