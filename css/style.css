@@ -841,6 +841,7 @@ body {
   left: 50%;
   top: -20px;
   transform: translatex(-50%) rotate(45deg);
+  z-index: -1;
 }
 
 /*================================================
